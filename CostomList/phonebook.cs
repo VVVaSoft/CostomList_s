@@ -22,7 +22,7 @@ namespace CostomList
             list.Add(new phonebook("иванов", "+599808080"));
             list.Add(new phonebook("петров", "+765855780"));
             list.Add(new phonebook("сидоров", "+575855780"));
-            return list;
+            return list; 
         }
     };
     
