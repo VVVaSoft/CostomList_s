@@ -26,7 +26,7 @@ namespace CostomList
         public ApplicationViewModel() {
             Phones=phonebook.create();
 
-            removeCommand = new MyCommand(obj =>
+            RemoveCommand = new MyCommand(obj =>
                     {
                         phonebook phone = obj as phonebook;
                         if (phone != null)
@@ -36,7 +36,7 @@ namespace CostomList
                     },
                     (obj) => Phones.Count > 0 && selectedPhone!=null);
 
-            addCommand = new MyCommand(obj =>
+            AddCommand = new MyCommand(obj =>
                     {
                         phonebook phone = new phonebook("user","");
                         
@@ -46,22 +46,9 @@ namespace CostomList
                     });
         }
 
-        private MyCommand addCommand;
-        public MyCommand AddCommand
-        {
-            get
-            {
-                return addCommand;
-            }
-        }
-        private MyCommand removeCommand;
-        public MyCommand RemoveCommand
-        {
-            get
-            {
-                return removeCommand; 
-            }
-        }
+        public MyCommand AddCommand{get;set;}
+        public MyCommand RemoveCommand{get;set;}
+       
 
     }
 }
